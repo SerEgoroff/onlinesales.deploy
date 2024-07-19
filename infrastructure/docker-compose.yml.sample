@@ -44,15 +44,15 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /data/onlinesales/postgres-data
+      device: /data/salespro/postgres-data
   elasticsearch-data:
     driver: local
     driver_opts:
       o: bind
       type: none
-      device: /data/onlinesales/elasticsearch-data
+      device: /data/salespro/elasticsearch-data
 
 networks:
   default:
-    name: onlinesales-network
+    name: salespro-network
     external: true

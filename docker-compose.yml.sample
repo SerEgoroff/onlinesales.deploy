@@ -1,9 +1,9 @@
 version: "2"
   
 services:
-  onlinesale:
-    container_name: onlinesales
-    image: wavepoint/onlinesales:1.2.7-pre
+  salespro:
+    container_name: salespro
+    image: wavepoint/salespro:1.2.7-pre
     env_file:
       - ./config.env
     volumes:
@@ -17,13 +17,13 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /home/onlinesales/onlinesales.deploy/plugins
+      device: /home/salespro/salespro.deploy/plugins
   frontend:
     driver: local
     driver_opts:
       o: bind
       type: none
-      device: /home/onlinesales/onlinesales.deploy/frontend
+      device: /home/salespro/salespro.deploy/frontend
 
 networks:
   default:
